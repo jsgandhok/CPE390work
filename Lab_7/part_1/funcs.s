@@ -2,8 +2,8 @@
 
 //1.)
 
-.global _Z12sub_minPii 
-_Z12sub_minPii: 
+.global _Z12subtract_minPii 
+_Z12subtract_minPii: 
 
   //r0 = points to int a[] 
   //r1 = len. Of the array 
