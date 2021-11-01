@@ -15,7 +15,7 @@ _Z12sub_minPii:
 1: 
   add r2, #1 	//i++ 
   cmp r2, r1 	//r2 = i & r1 = len of array 
-  bgt af 		//if (i >= len of array) bridge out of loop
+  bgt a 		//if (i >= len of array) bridge out of loop
   add r0, #4 	//move to next array pointer 
   ldr r4, [r0]	//r4 = a[1, 2, 3, ..., len] (never a[0]) 
   cmp r3, r4 	//r3 = min; r4 = a[i] 
@@ -27,7 +27,7 @@ a:
   mov r2, #0 //r2 = i (++ for loop) 
 2: 
   cmp r2, r1 //r2 = i; r1 = len of array 
-  bge bf //if (i >= len) bridge out 
+  bge b //if (i >= len) bridge out 
   add r2, #1 //i++ 
   ldr r4, [r0]//r4 = a[i]; r0 = pointer to a[i] 
   sub r4, r3 //a[i] = a[i] - minimum array value str r4, [r0]//store new a[i] back to memory 
